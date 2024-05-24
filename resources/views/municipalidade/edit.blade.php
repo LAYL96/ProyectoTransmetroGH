@@ -11,7 +11,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Update') }} Municipalidade</span>
+                        <span class="card-title">Modificar</span>
                     </div>
                     <div class="card-body bg-white">
                         <form method="POST" action="{{ route('municipalidades.update', $municipalidade->id) }}"  role="form" enctype="multipart/form-data">

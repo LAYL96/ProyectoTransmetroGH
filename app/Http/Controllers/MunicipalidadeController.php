@@ -39,7 +39,7 @@ class MunicipalidadeController extends Controller
         Municipalidade::create($request->validated());
 
         return redirect()->route('municipalidades.index')
-            ->with('success', 'Municipalidade created successfully.');
+            ->with('success', 'Municipalidad creada con éxito.');
     }
 
     /**
@@ -70,7 +70,7 @@ class MunicipalidadeController extends Controller
         $municipalidade->update($request->validated());
 
         return redirect()->route('municipalidades.index')
-            ->with('success', 'Municipalidade updated successfully');
+            ->with('success', 'Municipalidad actualizada con exito.');
     }
 
     public function destroy($id)
@@ -78,6 +78,6 @@ class MunicipalidadeController extends Controller
         Municipalidade::find($id)->delete();
 
         return redirect()->route('municipalidades.index')
-            ->with('success', 'Municipalidade deleted successfully');
+            ->with('success', 'Municipalidad Eliminada Con Exito.');
     }
 }
