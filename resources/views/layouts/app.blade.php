@@ -55,6 +55,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('municipalidades.index') }}" class="nav-link">Municipalidades</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('pilotos.index') }}" class="nav-link">Pilotos</a>
+                                </li>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>

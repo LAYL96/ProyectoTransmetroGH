@@ -29,6 +29,12 @@ class Municipalidade extends Model
      */
     protected $fillable = ['departamento', 'municipio'];
 
+    // Relación con el modelo Piloto
+    public function pilotos()
+    {
+        return $this->hasMany('App\Models\Piloto', 'id_municipalidad', 'id');
+    }
+
 
 
 }
