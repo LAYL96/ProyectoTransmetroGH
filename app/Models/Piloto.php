@@ -37,4 +37,10 @@ class Piloto extends Model
     {
         return $this->hasOne('App\Models\Municipalidade', 'id', 'id_municipalidad');
     }
+
+    // Relación con el modelo HistorialEducativo
+    public function historialEducativo()
+    {
+        return $this->hasMany('App\Models\HistorialEducativo', 'id_piloto', 'id');
+    }
 }

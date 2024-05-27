@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HistorialEducativoController;
 use App\Http\Controllers\MunicipalidadeController;
 use App\Http\Controllers\PilotoController;
 use Illuminate\Support\Facades\Auth;
@@ -16,3 +17,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('municipalidades', MunicipalidadeController::class);
 Route::resource('pilotos', PilotoController::class);
+Route::resource('historial-educativos', HistorialEducativoController::class);
