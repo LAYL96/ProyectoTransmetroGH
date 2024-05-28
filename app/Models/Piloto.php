@@ -43,4 +43,12 @@ class Piloto extends Model
     {
         return $this->hasMany('App\Models\HistorialEducativo', 'id_piloto', 'id');
     }
+
+    // Relacion con el modelo DireccionResidencia
+    
+    public function direccionesResidencia()
+    {
+        return $this->hasMany('App\Models\DireccionResidencium', 'id_piloto', 'id');
+    }
+        
 }

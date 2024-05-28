@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DireccionResidenciumController;
 use App\Http\Controllers\HistorialEducativoController;
 use App\Http\Controllers\MunicipalidadeController;
 use App\Http\Controllers\PilotoController;
@@ -18,3 +19,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('municipalidades', MunicipalidadeController::class);
 Route::resource('pilotos', PilotoController::class);
 Route::resource('historial-educativos', HistorialEducativoController::class);
+Route::resource('direccion-residencia', DireccionResidenciumController::class);

@@ -61,6 +61,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('historial-educativos.index') }}" class="nav-link">Historial Educativo</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('direccion-residencia.index') }}" class="nav-link">Direccion de Recidencia</a>
+                                </li>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
