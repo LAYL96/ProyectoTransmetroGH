@@ -45,10 +45,15 @@ class Piloto extends Model
     }
 
     // Relacion con el modelo DireccionResidencia
-    
     public function direccionesResidencia()
     {
         return $this->hasMany('App\Models\DireccionResidencium', 'id_piloto', 'id');
+    }
+
+    // Relacion con el modelo Contacto
+    public function contacto()
+    {
+        return $this->hasMany('App\Models\Contacto', 'id_piloto', 'id');
     }
         
 }

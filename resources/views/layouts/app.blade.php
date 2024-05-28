@@ -64,6 +64,9 @@
                                 <li class="nav-item">
                                     <a href="{{ route('direccion-residencia.index') }}" class="nav-link">Direccion de Recidencia</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('contactos.index') }}" class="nav-link">Contactos</a>
+                                </li>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
