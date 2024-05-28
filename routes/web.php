@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DireccionResidenciumController;
 use App\Http\Controllers\HistorialEducativoController;
+use App\Http\Controllers\LineaController;
 use App\Http\Controllers\MunicipalidadeController;
 use App\Http\Controllers\ParqueoController;
 use App\Http\Controllers\PilotoController;
@@ -24,3 +25,4 @@ Route::resource('historial-educativos', HistorialEducativoController::class);
 Route::resource('direccion-residencia', DireccionResidenciumController::class);
 Route::resource('contactos', ContactoController::class);
 Route::resource('parqueos', ParqueoController::class);
+Route::resource('lineas', LineaController::class);

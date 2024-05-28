@@ -35,6 +35,10 @@ class Municipalidade extends Model
         return $this->hasMany('App\Models\Piloto', 'id_municipalidad', 'id');
     }
 
+    public function linea(){
+        return $this->hasMany('App\Models\Linea', 'id_municipalidad', 'id');
+    }
+
 
 
 }
