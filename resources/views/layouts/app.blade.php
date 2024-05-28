@@ -65,7 +65,8 @@
                                     <a href="{{ route('pilotos.index') }}" class="nav-link">Pilotos</a>
                                     <a href="{{ route('historial-educativos.index') }}" class="nav-link">Historial Educativo</a>
                                     <a href="{{ route('direccion-residencia.index') }}" class="nav-link">Direccion de Recidencia</a>
-                                        <a href="{{ route('contactos.index') }}" class="nav-link">Contactos</a>
+                                    <a href="{{ route('contactos.index') }}" class="nav-link">Contactos</a>
+                                    <a href="{{ route('parqueos.index') }}" class="nav-link">Parqueos</a>
                                 </div>
                             
                             <li class="nav-item">
