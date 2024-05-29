@@ -70,6 +70,7 @@
                                     <a href="{{ route('lineas.index') }}" class="nav-link">Lineas</a>
                                     <a href="{{ route('autobuses.index') }}" class="nav-link">Autobuses</a>
                                     <a href="{{ route('operadores.index') }}" class="nav-link">Operador de Estacion</a>
+                                    <a href="{{ route('guardias-seguridads.index') }}" class="nav-link">Guardas de Seguridad</a>
                                 </div>
                             
                             <li class="nav-item">
