@@ -39,6 +39,9 @@ class Linea extends Model
         return $this->hasMany('App\Models\Autobus', 'id_linea', 'id');
     }
 
+    public function estacionLinea(){
+        return $this->hasMany('App\Models\EstacionesLinea', 'id_linea', 'id');
+    }
 
 
 }

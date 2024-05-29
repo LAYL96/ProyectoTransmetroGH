@@ -46,6 +46,8 @@ class Estacione extends Model
         return $this->belongsTo('App\Models\GuardiasSeguridad', 'id_guardia', 'id');
     }
 
-
+    public function estacionLinea(){
+        return $this->hasMany('App\Models\EstacionesLinea', 'id_estacion', 'id');
+    }
 
 }
