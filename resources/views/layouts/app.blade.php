@@ -69,6 +69,7 @@
                                     <a href="{{ route('parqueos.index') }}" class="nav-link">Parqueos</a>
                                     <a href="{{ route('lineas.index') }}" class="nav-link">Lineas</a>
                                     <a href="{{ route('autobuses.index') }}" class="nav-link">Autobuses</a>
+                                    <a href="{{ route('operadores.index') }}" class="nav-link">Operador de Estacion</a>
                                 </div>
                             
                             <li class="nav-item">
