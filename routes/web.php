@@ -3,6 +3,7 @@
 use App\Http\Controllers\AutobusController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DireccionResidenciumController;
+use App\Http\Controllers\EstacioneController;
 use App\Http\Controllers\GuardiasSeguridadController;
 use App\Http\Controllers\HistorialEducativoController;
 use App\Http\Controllers\LineaController;
@@ -32,3 +33,4 @@ Route::resource('lineas', LineaController::class);
 Route::resource('autobuses', AutobusController::class);
 Route::resource('operadores', OperadoreController::class);
 Route::resource('guardias-seguridads', GuardiasSeguridadController::class);
+Route::resource('estaciones', EstacioneController::class);

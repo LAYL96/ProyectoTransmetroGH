@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Municipalidade extends Model
 {
-    
+
 
     protected $perPage = 20;
 
@@ -35,10 +35,13 @@ class Municipalidade extends Model
         return $this->hasMany('App\Models\Piloto', 'id_municipalidad', 'id');
     }
 
-    public function linea(){
+    public function linea()
+    {
         return $this->hasMany('App\Models\Linea', 'id_municipalidad', 'id');
     }
 
-
-
+    public function estacion()
+    {
+        return $this->hasMany('App\Models\Estacione', 'id_municipalidad', 'id');
+    }
 }

@@ -30,6 +30,11 @@ class Operadore extends Model
      */
     protected $fillable = ['nombre', 'apellido', 'serie_pc'];
 
+    public function estacion()
+    {
+        return $this->hasMany('App\Models\Estacione', 'id_operador', 'id');
+    }
+
 
 
 }

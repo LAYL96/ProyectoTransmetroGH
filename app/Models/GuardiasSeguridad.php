@@ -30,6 +30,13 @@ class GuardiasSeguridad extends Model
      */
     protected $fillable = ['nombre', 'apellido', 'edad'];
 
+    public function estacion()
+    {
+        return $this->hasMany('App\Models\Estacione', 'id_estacion', 'id');
+    }
+
+    
+
 
 
 }

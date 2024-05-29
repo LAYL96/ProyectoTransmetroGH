@@ -71,6 +71,7 @@
                                     <a href="{{ route('autobuses.index') }}" class="nav-link">Autobuses</a>
                                     <a href="{{ route('operadores.index') }}" class="nav-link">Operador de Estacion</a>
                                     <a href="{{ route('guardias-seguridads.index') }}" class="nav-link">Guardas de Seguridad</a>
+                                    <a href="{{ route('estaciones.index') }}" class="nav-link">Estaciones de Bus</a>
                                 </div>
                             
                             <li class="nav-item">
