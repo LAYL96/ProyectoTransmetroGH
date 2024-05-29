@@ -30,6 +30,10 @@ class Parqueo extends Model
      */
     protected $fillable = ['numero', 'nombre', 'direccion'];
 
+    public function autobus(){
+        return $this->hasMany('App\Models\Autobus', 'id_parqueo', 'id');
+    }
+
 
 
 }

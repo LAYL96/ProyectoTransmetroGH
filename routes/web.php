@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AutobusController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DireccionResidenciumController;
 use App\Http\Controllers\HistorialEducativoController;
@@ -26,3 +27,4 @@ Route::resource('direccion-residencia', DireccionResidenciumController::class);
 Route::resource('contactos', ContactoController::class);
 Route::resource('parqueos', ParqueoController::class);
 Route::resource('lineas', LineaController::class);
+Route::resource('autobuses', AutobusController::class);

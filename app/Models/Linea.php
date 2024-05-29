@@ -35,6 +35,10 @@ class Linea extends Model
         return $this->belongsTo('App\Models\Municipalidade', 'id_municipalidad', 'id');
     }
 
+    public function autobus(){
+        return $this->hasMany('App\Models\Autobus', 'id_linea', 'id');
+    }
+
 
 
 }

@@ -55,5 +55,9 @@ class Piloto extends Model
     {
         return $this->hasMany('App\Models\Contacto', 'id_piloto', 'id');
     }
+
+    public function autobus(){
+        return $this->hasMany('App\Models\Autobus', 'id_piloto', 'id');
+    }
         
 }
