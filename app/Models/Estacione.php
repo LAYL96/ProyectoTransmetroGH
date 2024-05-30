@@ -50,4 +50,14 @@ class Estacione extends Model
         return $this->hasMany('App\Models\EstacionesLinea', 'id_estacion', 'id');
     }
 
+    public function distanciaOrigen()
+    {
+        return $this->hasMany('App\Models\DistanciasEntreEstacione', 'id_estacion_origen', 'id');
+    }
+
+    public function distanciaDestino()
+    {
+        return $this->hasMany('App\Models\DistanciasEntreEstacione', 'id_estacion_destino', 'id');
+    }
+
 }

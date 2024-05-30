@@ -73,6 +73,7 @@
                                     <a href="{{ route('guardias-seguridads.index') }}" class="nav-link">Guardas de Seguridad</a>
                                     <a href="{{ route('estaciones.index') }}" class="nav-link">Estaciones de Bus</a>
                                     <a href="{{ route('estaciones-lineas.index') }}" class="nav-link">Orden de Estaciones de Buses</a>
+                                    <a href="{{ route('distancias-entre-estaciones.index') }}" class="nav-link">Distancias entre Estaciones de Bus</a>
                                 </div>
                             
                             <li class="nav-item">
