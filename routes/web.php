@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccesoController;
 use App\Http\Controllers\AutobusController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DireccionResidenciumController;
@@ -38,3 +39,4 @@ Route::resource('guardias-seguridads', GuardiasSeguridadController::class);
 Route::resource('estaciones', EstacioneController::class);
 Route::resource('estaciones-lineas', EstacionesLineaController::class);
 Route::resource('distancias-entre-estaciones', DistanciasEntreEstacioneController::class);
+Route::resource('accesos', AccesoController::class);

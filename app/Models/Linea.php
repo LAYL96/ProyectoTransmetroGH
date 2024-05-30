@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Linea extends Model
 {
-    
+
 
     protected $perPage = 20;
 
@@ -31,17 +31,23 @@ class Linea extends Model
      */
     protected $fillable = ['id_municipalidad', 'nombre', 'zona', 'distancia_total_km'];
 
-    public function municipalidad(){
+    public function municipalidad()
+    {
         return $this->belongsTo('App\Models\Municipalidade', 'id_municipalidad', 'id');
     }
 
-    public function autobus(){
+    public function autobus()
+    {
         return $this->hasMany('App\Models\Autobus', 'id_linea', 'id');
     }
 
-    public function estacionLinea(){
+    public function estacionLinea()
+    {
         return $this->hasMany('App\Models\EstacionesLinea', 'id_linea', 'id');
     }
 
-
+    public function acceso()
+    {
+        return $this->hasMany('App\Models\Acceso', 'id_linea', 'id');
+    }
 }
