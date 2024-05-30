@@ -50,4 +50,9 @@ class Linea extends Model
     {
         return $this->hasMany('App\Models\Acceso', 'id_linea', 'id');
     }
+
+    public function longitudLinea()
+    {
+        return $this->hasMany('App\Models\LongitudesLinea', 'id_linea', 'id');
+    }
 }
