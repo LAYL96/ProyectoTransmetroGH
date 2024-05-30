@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Estacione extends Model
 {
-    
+
 
     protected $perPage = 20;
 
@@ -34,19 +34,23 @@ class Estacione extends Model
      */
     protected $fillable = ['id_municipalidad', 'id_operador', 'id_guardia', 'nombre', 'direccion', 'capacidad_actual', 'alerta'];
 
-    public function municipalidad(){
+    public function municipalidad()
+    {
         return $this->belongsTo('App\Models\Municipalidade', 'id_municipalidad', 'id');
     }
 
-    public function operador(){
+    public function operador()
+    {
         return $this->belongsTo('App\Models\Operadore', 'id_operador', 'id');
     }
 
-    public function guardia(){
+    public function guardia()
+    {
         return $this->belongsTo('App\Models\GuardiasSeguridad', 'id_guardia', 'id');
     }
 
-    public function estacionLinea(){
+    public function estacionLinea()
+    {
         return $this->hasMany('App\Models\EstacionesLinea', 'id_estacion', 'id');
     }
 
@@ -60,4 +64,13 @@ class Estacione extends Model
         return $this->hasMany('App\Models\DistanciasEntreEstacione', 'id_estacion_destino', 'id');
     }
 
+    public function conexionOrigen()
+    {
+        return $this->hasMany(Conexione::class, 'id_estacion_origen', 'id');
+    }
+
+    public function conexionDestino()
+    {
+        return $this->hasMany(Conexione::class, 'id_estacion_destino', 'id');
+    }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccesoController;
 use App\Http\Controllers\AutobusController;
+use App\Http\Controllers\ConexioneController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DireccionResidenciumController;
 use App\Http\Controllers\DistanciasEntreEstacioneController;
@@ -42,3 +43,4 @@ Route::resource('estaciones-lineas', EstacionesLineaController::class);
 Route::resource('distancias-entre-estaciones', DistanciasEntreEstacioneController::class);
 Route::resource('accesos', AccesoController::class);
 Route::resource('longitudes-lineas', LongitudesLineaController::class);
+Route::resource('conexiones', ConexioneController::class);

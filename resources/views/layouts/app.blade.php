@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Transmetro Web</title>
+    <title>GEDIMETRO</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -25,7 +25,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Transmetro WEB
+                    GEDIMETRO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -76,6 +76,7 @@
                                     <a href="{{ route('distancias-entre-estaciones.index') }}" class="nav-link">Distancias entre Estaciones de Bus</a>
                                     <a href="{{ route('accesos.index') }}" class="nav-link">Acesos de Lineas</a>
                                     <a href="{{ route('longitudes-lineas.index') }}" class="nav-link">Longitud de Cada Linea</a>
+                                    <a href="{{ route('conexiones.index') }}" class="nav-link">Conexion de PC con Estaciones</a>
                                 </div>
                             
                             <li class="nav-item">
