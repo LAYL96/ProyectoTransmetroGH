@@ -24,7 +24,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/home') }}">
                     GEDIMETRO
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -55,31 +55,33 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    Menu
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a href="{{ route('municipalidades.index') }}" class="nav-link">Municipalidades</a>
-                                    <a href="{{ route('pilotos.index') }}" class="nav-link">Pilotos</a>
-                                    <a href="{{ route('historial-educativos.index') }}" class="nav-link">Historial Educativo</a>
-                                    <a href="{{ route('direccion-residencia.index') }}" class="nav-link">Direccion de Recidencia</a>
-                                    <a href="{{ route('contactos.index') }}" class="nav-link">Contactos</a>
-                                    <a href="{{ route('parqueos.index') }}" class="nav-link">Parqueos</a>
-                                    <a href="{{ route('lineas.index') }}" class="nav-link">Lineas</a>
-                                    <a href="{{ route('autobuses.index') }}" class="nav-link">Autobuses</a>
-                                    <a href="{{ route('operadores.index') }}" class="nav-link">Operador de Estacion</a>
-                                    <a href="{{ route('guardias-seguridads.index') }}" class="nav-link">Guardas de Seguridad</a>
-                                    <a href="{{ route('estaciones.index') }}" class="nav-link">Estaciones de Bus</a>
-                                    <a href="{{ route('estaciones-lineas.index') }}" class="nav-link">Orden de Estaciones de Buses</a>
-                                    <a href="{{ route('distancias-entre-estaciones.index') }}" class="nav-link">Distancias entre Estaciones de Bus</a>
-                                    <a href="{{ route('accesos.index') }}" class="nav-link">Acesos de Lineas</a>
-                                    <a href="{{ route('longitudes-lineas.index') }}" class="nav-link">Longitud de Cada Linea</a>
-                                    <a href="{{ route('conexiones.index') }}" class="nav-link">Conexion de PC con Estaciones</a>
-                                </div>
-                            
-                            <li class="nav-item">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Menu
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a href="{{ route('municipalidades.index') }}" class="nav-link">Municipalidades</a>
+                                <a href="{{ route('pilotos.index') }}" class="nav-link">Pilotos</a>
+                                <a href="{{ route('historial-educativos.index') }}" class="nav-link">Historial Educativo</a>
+                                <a href="{{ route('direccion-residencia.index') }}" class="nav-link">Direccion de Recidencia</a>
+                                <a href="{{ route('contactos.index') }}" class="nav-link">Contactos</a>
+                                <a href="{{ route('parqueos.index') }}" class="nav-link">Parqueos</a>
+                                <div class="dropdown-divider"></div>
+                                <span class="dropdown-header">Transporte Público</span>
+                                <a href="{{ route('lineas.index') }}" class="nav-link">Lineas</a>
+                                <a href="{{ route('autobuses.index') }}" class="nav-link">Autobuses</a>
+                                <a href="{{ route('operadores.index') }}" class="nav-link">Operador de Estacion</a>
+                                <a href="{{ route('guardias-seguridads.index') }}" class="nav-link">Guardas de Seguridad</a>
+                                <a href="{{ route('estaciones.index') }}" class="nav-link">Estaciones de Bus</a>
+                                <a href="{{ route('estaciones-lineas.index') }}" class="nav-link">Orden de Estaciones de Buses</a>
+                                <a href="{{ route('distancias-entre-estaciones.index') }}" class="nav-link">Distancias entre Estaciones de Bus</a>
+                                <a href="{{ route('accesos.index') }}" class="nav-link">Acesos de Lineas</a>
+                                <a href="{{ route('longitudes-lineas.index') }}" class="nav-link">Longitud de Cada Linea</a>
+                                <a href="{{ route('conexiones.index') }}" class="nav-link">Conexion de PC con Estaciones</a>
+                            </div>
+                        </li>
+                        
                                 
                             </li>
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
