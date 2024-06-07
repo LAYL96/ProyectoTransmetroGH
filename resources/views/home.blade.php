@@ -85,29 +85,29 @@
                                     <thead class="thead-dark">
                                         <thead>
                                             <tr>
-                                                <th>Nombre Piloto</th>
-                                                <th>Municipio</th>
-                                                <th>Dirección</th>
-                                                <th>Ciudad</th>
-                                                <th>Teléfono</th>
-                                                <th>Correo</th>
-                                                <th>Código Postal</th>
+                                                <th>Nombre</th>
                                                 <th>Fecha de Nacimiento</th>
                                                 <th>Género</th>
+                                                <th>Municipio</th>
+                                                <th>Teléfono</th>
+                                                <th>Correo</th>
+                                                <th>Dirección</th>
+                                                <th>Ciudad</th>
+                                                <th>Código Postal</th>
                                             </tr>
                                         </thead>
                                     <tbody>
                                         @foreach ($pilotos as $piloto)
                                             <tr>
-                                                <td>{{ $piloto->Nombre_Piloto }}</td>
-                                                <td>{{ $piloto->Municipio }}</td>
-                                                <td>{{ $piloto->Direccion }}</td>
-                                                <td>{{ $piloto->Ciudad }}</td>
-                                                <td>{{ $piloto->Telefono }}</td>
-                                                <td>{{ $piloto->Correo }}</td>
-                                                <td>{{ $piloto->Codigo_Postal }}</td>
-                                                <td>{{ $piloto->Fecha_Nacimiento }}</td>
-                                                <td>{{ $piloto->Genero }}</td>
+                                                <td>{{ $piloto['Nombre_Piloto'] }}</td>
+                                                <td>{{ $piloto['Fecha_Nacimiento'] }}</td>
+                                                <td>{{ $piloto['Genero'] }}</td>
+                                                <td>{{ $piloto['Municipio'] }}</td>
+                                                <td>{{ $piloto['Telefono'] }}</td>
+                                                <td>{{ $piloto['Correo'] }}</td>
+                                                <td>{{ $piloto['Direccion'] }}</td>
+                                                <td>{{ $piloto['Ciudad'] }}</td>
+                                                <td>{{ $piloto['Codigo_Postal'] }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>

@@ -29,21 +29,26 @@ class HomeController extends Controller
     {
         $estaciones = Estacione::with(['municipalidad', 'operador', 'guardia'])->get();
         $autobuses = Autobus::with(['linea', 'piloto', 'parqueo'])->get();
-        $pilotos = Piloto::join('Municipalidades as m', 'Pilotos.id_municipalidad', '=', 'm.id')
-            ->join('Contacto as c', 'Pilotos.id', '=', 'c.id_piloto')
-            ->join('Direccion_Residencia as d', 'Pilotos.id', '=', 'd.id_piloto')
-            ->select(
-                'Pilotos.nombre as Nombre_Piloto',
-                'Pilotos.fecha_nacimiento as Fecha_Nacimiento',
-                'Pilotos.genero as Genero',
-                'm.municipio as Municipio',
-                'c.telefono as Telefono',
-                'c.correo as Correo',
-                'd.direccion as Direccion',
-                'd.ciudad as Ciudad',
-                'd.codigo_postal as Codigo_Postal' // Añadido
-            )
-            ->get();
+        $pilotos = Piloto::with(['municipalidades', 'contacto', 'direccionesResidencia'])
+            ->get()
+            ->map(function ($piloto) {
+                $municipio = $piloto->municipalidades->first(); // Obtener el primer municipio asociado al piloto
+                $contacto = $piloto->contacto->first(); // Obtener el primer contacto asociado al piloto
+                $direccionResidencia = $piloto->direccionesResidencia->first(); // Obtener la primera dirección de residencia asociada al piloto
+
+                return [
+                    'Nombre_Piloto' => $piloto->nombre,
+                    'Fecha_Nacimiento' => $piloto->fecha_nacimiento,
+                    'Genero' => $piloto->genero,
+                    'Municipio' => $municipio ? $municipio->municipio : null,
+                    'Telefono' => $contacto ? $contacto->telefono : null,
+                    'Correo' => $contacto ? $contacto->correo : null,
+                    'Direccion' => $direccionResidencia ? $direccionResidencia->direccion : null,
+                    'Ciudad' => $direccionResidencia ? $direccionResidencia->ciudad : null,
+                    'Codigo_Postal' => $direccionResidencia ? $direccionResidencia->codigo_postal : null,
+                ];
+            });
+
 
         $lineas = Linea::with(['municipalidad'])->get();
 
